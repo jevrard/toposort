@@ -1,0 +1,75 @@
+body {
+	width: 750px;
+	margin: auto;
+}
+
+h1, h2, h3 {
+	text-align: center;
+	border: 1px solid black;
+	border-right: 0px;
+	border-left: 0px;
+	padding: 5px;
+}
+
+h2 { color: #991A1A; }
+h3 { padding: 2px; }
+h4 { text-align: center; }
+code {
+	color:#c7254e;
+	background-color:#f9f2f4;
+	border-radius:4px;
+	padding:2px 4px;
+	font-style: italic;
+}
+
+p { text-align: justify; }
+
+blockquote {
+	border: 10px solid lightgrey;
+	border-top: 0px;
+	border-bottom: 0px;
+	padding: 1px 15px ;
+}
+
+.toposort {
+	background-color: #D4EDD8;
+	border-radius:10px;
+	color: #085914;
+  font-size: 18px;
+	padding: 10px;
+}
+
+.file {
+	background-color: #D4E5ED;
+	padding: 10px;
+	border-radius:10px;
+	color: #083F59;
+	font-style: italic;
+}
+
+.error {
+	color: red;
+	font-size: 18px;
+	width: 600px;
+	border: 1px dotted red;
+	padding: 5px;
+	margin: auto;
+}
+
+/* balises SVG */
+svg {
+	background-color: lightgrey;
+	border-radius:10px;
+}
+
+line, circle { stroke : #000; }
+line { stroke-width: 2px; }
+marker { fill: #000; }
+circle { stroke-width: 1.5px; }
+.node { cursor: move; }
+
+text {
+  fill: #fff;
+  font: 15px sans-serif;
+  font-weight: bold;
+}

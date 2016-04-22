@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding="utf-8" ?>
+<!DOCTYPE graph SYSTEM "graph.dtd">
+
+<graph>
+	<vertices>
+		<vertex name="1"/>
+	</vertices>
+	<arrows>
+		<arrow tail="1" head="3"/>
+    <arrow tail="1" head="2"/>
+	</arrows>
+</graph>
+
+<!-- Exemple de graphe validé par le DTD mais qui n'est pourtant pas correct -->

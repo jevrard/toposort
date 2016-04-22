@@ -1,0 +1,13 @@
+all: main
+
+main: main.o container.cpp forme.o
+	g++ $^ -o main -lQtGui -lQtCore
+
+main.o:
+	g++ -c main.cpp -o main.o -Wall -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore
+
+%.o: %.cpp
+	@g++ -c $< -o $@ -Wall -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore
+
+clean:
+	rm -rf *.o

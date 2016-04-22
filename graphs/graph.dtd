@@ -1,0 +1,10 @@
+<!ELEMENT graph (vertices,arrows)>
+
+<!ELEMENT vertices (vertex+)>
+<!ELEMENT vertex EMPTY>
+<!ATTLIST vertex name CDATA #REQUIRED>
+
+<!ELEMENT arrows (arrow+)>
+<!ELEMENT arrow EMPTY>
+<!ATTLIST arrow tail CDATA #REQUIRED>
+<!ATTLIST arrow head CDATA #REQUIRED>

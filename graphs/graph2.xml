@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding="utf-8" ?>
+<!DOCTYPE graph SYSTEM "graph.dtd">
+
+<graph>
+	<vertices>
+		<vertex name="1"/>
+    <vertex name="2"/>
+    <vertex name="3"/>
+    <vertex name="4"/>
+    <vertex name="5"/>
+	</vertices>
+	<arrows>
+		<arrow tail="2" head="1"/>
+    <arrow tail="3" head="2"/>
+    <arrow tail="3" head="4"/>
+    <arrow tail="4" head="2"/>
+	</arrows>
+</graph>

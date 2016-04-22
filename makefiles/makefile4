@@ -1,0 +1,17 @@
+all: main
+
+main:
+	g++ $^ -o main -lQtGui -lQtCore
+
+# impossible !
+main.o: %.cpp
+	g++ -c main.cpp -o main.o -Wall -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore
+
+# impossible ! (aucun .o demandé avant la règle générique)
+%.o: %.cpp
+	@g++ -c $< -o $@ -Wall -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtCore
+
+clean:
+	rm -rf *.o
+
+# Exemple d'un makefile qui ne peut pas être exécuté

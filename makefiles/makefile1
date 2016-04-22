@@ -1,0 +1,19 @@
+all: clean projet.exe
+	@echo "-> Execute projet.exe"
+	./projet.exe
+
+projet.exe: moc_zone_dessin.cpp
+	@echo "-> Compile $@"
+	g++ main.cpp $^ draw_widget.cpp zone_dessin.cpp main_window.cpp -I/usr/include/qt4 -lQtCore -lQtGui -Wall -o projet.exe
+
+moc_%.cpp:
+	@echo "-> Create moc $@"
+	moc $*.h -o $@
+
+clean:
+	@echo "-> Clean project"
+	rm -rf *.exe moc_*.cpp
+
+debug: projet.exe
+	@echo "-> Debug project"
+	valgrind ./projet.exe

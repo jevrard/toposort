@@ -1,0 +1,15 @@
+all: tp1_1.exe tp1_2.exe tp1_3.exe
+
+# link .o and transform into .exe
+tp%.exe: tp%_nasm.o
+	@echo "-> Create binary $@"
+	@gcc -o $@ $< -m32 -ggdb
+
+# compile .asm into .o
+tp%_nasm.o: tp%_nasm.asm
+	@echo "-> Compile $<"
+	@nasm -f elf $< -g -F dwarf
+
+# remove all objects files and binaries
+#clean:
+#	rm -rf *.exe *.o
